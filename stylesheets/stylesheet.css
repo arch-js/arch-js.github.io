@@ -7,6 +7,10 @@ body {
   color: #606c71;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 a {
   color: #1e6bb8;
   text-decoration: none;
@@ -26,7 +30,6 @@ a:hover {
   border-width: 1px;
   border-radius: 0.3rem;
   transition: color 0.2s, background-color 0.2s, border-color 0.2s;
-  width: 100%;
   padding: 0.75rem;
   font-size: 0.9rem;
 }
@@ -65,11 +68,6 @@ a:hover {
   padding: 2rem 1rem;
 }
 
-.page-header h1,
-.page-header h2 {
-  color: #fff;
-}
-
 @media only screen and (min-width: 40.063em) {
   .page-header {
     padding: 3rem 4rem;
@@ -80,6 +78,15 @@ a:hover {
   .page-header {
     padding: 5rem 6rem;
   }
+}
+
+.page-header h1 {
+  font-weight: bold;
+}
+
+.page-header h1,
+.page-header h2 {
+  color: #fff;
 }
 
 .project-name {
@@ -102,6 +109,7 @@ a:hover {
 
 
 .project-tagline {
+  margin-top: 0.83em;
   margin-bottom: 2rem;
   font-weight: normal;
   opacity: 0.7;
