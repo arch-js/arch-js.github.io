@@ -303,3 +303,7 @@ a:hover {
     font-size: 1rem;
   }
 }
+
+.main-content ul.pagination {
+  margin-top: 5rem;
+}
