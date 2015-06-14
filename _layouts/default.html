@@ -13,8 +13,10 @@
   <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/stylesheets/foundation.css" media="screen">
   <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/stylesheets/stylesheet.css" media="screen">
   <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/stylesheets/github-light.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/stylesheets/github-highlight.css" media="screen">
 
   <script src="{{ site.baseurl }}/js/vendor/modernizr.js"></script>
+  <script src="{{ site.baseurl }}/js/vendor/highlight.pack.js"></script>
 </head>
 
 <body>
@@ -58,6 +60,7 @@
   <script src="{{ site.baseurl }}/js/foundation/foundation.js"></script>
   <script>
     $(document).foundation();
+    hljs.initHighlightingOnLoad();
   </script>
 </body>
 
