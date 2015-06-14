@@ -28,11 +28,14 @@
 
   {% include navbar.html page=page %}
 
-  <section class="page-header">
-    <h1 class="project-name">Arch</h1>
-    <h2 class="project-tagline">Web application framework for React.</h2>
-    <a href="{{ site.baseurl }}/docs/basic-tutorial.html" class="btn">Documentation</a>
-  </section>
+  {% if page.show-header %}
+    <section class="page-header">
+      <h1 class="project-name">Arch</h1>
+      <h2 class="project-tagline">Web application framework for React.</h2>
+      <a href="{{ site.baseurl }}/docs/basic-tutorial.html" class="btn">Documentation</a>
+      <a href="https://github.com/arch-js" class="btn">GitHub</a>
+    </section>
+  {% endif %}
 
   {% if page.no-pagination != true %}
     <section class="pagination row">

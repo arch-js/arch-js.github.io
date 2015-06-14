@@ -89,6 +89,10 @@ a:hover {
   color: #fff;
 }
 
+.page-header .btn {
+  width: 150px;
+}
+
 .project-name {
   margin-top: 0;
   margin-bottom: 0.1rem;
