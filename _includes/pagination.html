@@ -1,18 +1,18 @@
-{% assign prev-page = page.page-number | minus:2 %}
+{% assign prev-page = include.page | minus:2 %}
 {% assign pages = site.data.articles | size %}
 
 <div class="pagination-centered">
   <ul class="pagination">
-    <li class="arrow {% if page.page-number == 1 %}unavailable{% endif %}">
-      <a {% if page.page-number != 1 %}href="{{ site.baseurl }}/docs/{{ site.data.articles[prev-page].filename }}.html"{% endif %}>&laquo;</a>
+    <li class="arrow {% if include.page == 1 %}unavailable{% endif %}">
+      <a {% if include.page != 1 %}href="{{ site.baseurl }}/{{ site.data.articles[prev-page].path }}"{% endif %}>&laquo;</a>
     </li>
     {% for article in site.data.articles %}
-      <li {% if page.page-number == forloop.index %}class="current"{% endif %}>
-        <a href="{{ site.baseurl }}/docs/{{ article.filename }}.html">{{ forloop.index }}</a>
+      <li {% if include.page == forloop.index %}class="current"{% endif %}>
+        <a href="{{ site.baseurl }}/{{ article.path }}">{{ forloop.index }}</a>
       </li>
     {% endfor %}
-    <li class="arrow {% if page.page-number == pages %}unavailable{% endif %}">
-      <a {% if page.page-number != pages %}href="{{ site.baseurl }}/docs/{{ site.data.articles[page.page-number].filename }}.html"{% endif %}>&raquo;</a>
+    <li class="arrow {% if include.page == pages %}unavailable{% endif %}">
+      <a {% if include.page != pages %}href="{{ site.baseurl }}/{{ site.data.articles[include.page].path }}"{% endif %}>&raquo;</a>
     </li>
   </ul>
 </div>

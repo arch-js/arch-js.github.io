@@ -20,7 +20,7 @@
         <a>Documentation</a>
         <ul class="dropdown">
           {% for article in site.data.articles %}
-            <li><a href="{{ site.baseurl }}/docs/{{ article.filename }}.html">{{ forloop.index }} | {{ article.name }}</a></li>
+            <li><a href="{{ site.baseurl }}/{{ article.path }}">{{ forloop.index }} | {{ article.name }}</a></li>
           {% endfor %}
         </ul>
       </li>

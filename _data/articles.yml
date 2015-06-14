@@ -1,14 +1,14 @@
 - name: Basic Tutorial
-  filename: basic-tutorial
+  path: docs/basic-tutorial.html
 - name: Understanding Arch
-  filename: understanding-arch
+  path: docs/understanding-arch.html
 - name: Arch Architecture
-  filename: arch-architecture
+  path: docs/arch-architecture.html
 - name: Application as Data
-  filename: application-as-data
+  path: docs/application-as-data.html
 - name: Cursors and Immutables
-  filename: cursors-and-immutables
+  path: docs/cursors-and-immutables.html
 - name: Livescript
-  filename: livescript
+  path: docs/livescript.html
 - name: Isomorphism Routing
-  filename: isomorphism-routing
+  path: docs/isomorphism-routing.html

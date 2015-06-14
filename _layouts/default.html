@@ -20,6 +20,11 @@
 </head>
 
 <body>
+  {% for a in site.data.articles %}
+    {% if a.path and page.path == a.path %}
+      {% assign page = forloop.index %}
+    {% endif %}
+  {% endfor %}
 
   {% include navbar.html %}
 
@@ -32,7 +37,7 @@
   {% if page.no-pagination != true %}
     <section class="pagination row">
       <div class="column large-12">
-        {% include pagination.html %}
+        {% include pagination.html page=page %}
       </div>
     </section>
   {% endif %}
@@ -46,7 +51,7 @@
   {% if page.no-pagination != true %}
     <section class="pagination row">
       <div class="column large-12">
-        {% include pagination.html %}
+        {% include pagination.html page=page %}
       </div>
     </section>
   {% endif %}
