@@ -19,13 +19,9 @@
       <li class="has-dropdown">
         <a>Documentation</a>
         <ul class="dropdown">
-          <li><a href="{{ site.baseurl }}/docs/basic-tutorial.html">1 | Basic Tutorial</a></li>
-          <li><a href="{{ site.baseurl }}/docs/understanding-arch.html">2 | Understanding Arch</a></li>
-          <li><a href="{{ site.baseurl }}/docs/arch-architecture.html">3 | Arch Architecture</a></li>
-          <li><a href="{{ site.baseurl }}/docs/application-as-data.html">4 | Application as Data</a></li>
-          <li><a href="{{ site.baseurl }}/docs/cursors-and-immutables.html">5 | Cursors and Immutables</a></li>
-          <li><a href="{{ site.baseurl }}/docs/livescript.html">6 | Livescript</a></li>
-          <li><a href="{{ site.baseurl }}/docs/isomorphism-routing.html">7 | Isomorphism Routing</a></li>
+          {% for article in site.data.articles %}
+            <li><a href="{{ site.baseurl }}/docs/{{ article.filename }}.html">{{ forloop.index }} | {{ article.name }}</a></li>
+          {% endfor %}
         </ul>
       </li>
     </ul>
