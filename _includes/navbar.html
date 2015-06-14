@@ -20,7 +20,9 @@
         <a>Documentation</a>
         <ul class="dropdown">
           {% for article in site.data.articles %}
-            <li><a href="{{ site.baseurl }}/{{ article.path }}">{{ forloop.index }} | {{ article.name }}</a></li>
+            <li {% if include.page == forloop.index %}class="active"{% endif %}>
+              <a href="{{ site.baseurl }}/{{ article.path }}">{{ forloop.index }} | {{ article.name }}</a>
+            </li>
           {% endfor %}
         </ul>
       </li>
