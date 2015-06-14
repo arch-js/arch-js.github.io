@@ -304,6 +304,6 @@ a:hover {
   }
 }
 
-.main-content ul.pagination {
-  margin-top: 5rem;
+.pagination {
+  margin-top: 1.25rem;
 }

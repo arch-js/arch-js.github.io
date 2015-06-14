@@ -29,6 +29,14 @@
     <a href="{{ site.baseurl }}/docs/basic-tutorial.html" class="btn">Documentation</a>
   </section>
 
+  {% if page.no-pagination != true %}
+    <section class="pagination row">
+      <div class="column large-12">
+        {% include pagination.html %}
+      </div>
+    </section>
+  {% endif %}
+
   <section class="main-content row">
     <div class="column large-12">
       {{ content }}
