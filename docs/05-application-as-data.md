@@ -1,3 +1,7 @@
+---
+
+---
+
 # Application as Data
 The main change in the approach React takes to building user interfaces is how it handles the data your UI is rendering. You start building your interface from a static markup. Then you decide which aspects of the content you need to control from outside of the component (`props`) and finally you add interaction by letting some of the data change (by abstracting it into the `state`). Your user interface thus becomes a projection of a data structure composed of the `props` and the `state`. Your UI is a function of the `props` and `state`.
 

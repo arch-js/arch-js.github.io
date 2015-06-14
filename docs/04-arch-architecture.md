@@ -1,3 +1,7 @@
+---
+
+---
+
 # Arch architecture
 Arch strives to reduce the complexity of user facing applications as much as possible [in the same sense React does](https://speakerdeck.com/vjeux/why-does-react-scale-jsconf-2014) - reducing the time to find a cause of a problem. That means reducing the number of places where a problem you are diagnosing can be caused.
 

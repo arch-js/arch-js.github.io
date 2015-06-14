@@ -1,3 +1,7 @@
+---
+
+---
+
 # Cursors over Immutable Data
 In this section we'll discuss the details and reasons for using cursors over immutable data structures as the storage mechanism for state in Arch rather than mutable data.
 

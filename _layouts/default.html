@@ -21,7 +21,7 @@
 
 <body>
   {% for a in site.data.articles %}
-    {% if a.path and page.path == a.path %}
+    {% if a.source and page.path == a.source %}
       {% assign page = forloop.index %}
     {% endif %}
   {% endfor %}
@@ -32,7 +32,7 @@
     <section class="page-header">
       <h1 class="project-name">Arch</h1>
       <h2 class="project-tagline">Web application framework for React.</h2>
-      <a href="{{ site.baseurl }}/docs/basic-tutorial.html" class="btn">Documentation</a>
+      <a href="{{ site.baseurl }}/docs/02-basic-tutorial.html" class="btn">Documentation</a>
       <a href="https://github.com/arch-js" class="btn">GitHub</a>
     </section>
   {% endif %}

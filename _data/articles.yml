@@ -1,14 +1,21 @@
 - name: Basic Tutorial
-  path: docs/basic-tutorial.html
+  source: docs/02-basic-tutorial.md
+  path: docs/02-basic-tutorial.html
 - name: Understanding Arch
-  path: docs/understanding-arch.html
+  source: docs/03-understanding-arch.md
+  path: docs/03-understanding-arch.html
 - name: Arch Architecture
-  path: docs/arch-architecture.html
+  source: docs/04-arch-architecture.md
+  path: docs/04-arch-architecture.html
 - name: Application as Data
-  path: docs/application-as-data.html
+  source: docs/05-application-as-data.md
+  path: docs/05-application-as-data.html
 - name: Cursors and Immutables
-  path: docs/cursors-and-immutables.html
+  source: docs/06-cursors-and-immutables.md
+  path: docs/06-cursors-and-immutables.html
 - name: Livescript
-  path: docs/livescript.html
+  source: docs/07-livescript.md
+  path: docs/07-livescript.html
 - name: Isomorphism Routing
-  path: docs/isomorphism-routing.html
+  source: docs/08-isomorphism-routing.md
+  path: docs/08-isomorphism-routing.html
