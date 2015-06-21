@@ -22,10 +22,10 @@ arch-cli init
 This will generate an application skeleton. You can start the application by running
 
 ```
-arch-cli s
+arch-cli s -w
 ```
 
-and access the application on [http://localhost:3000](http://localhost:3000)
+and access the application on [http://localhost:3000](http://localhost:3000). The options `-w` makes the server `w`atch the source files and restart one one has changed so you can live experiment.
 
 ## Add a route
 As part of the example application, you'll get a route to handle  the `/` URL. In most cases, you want your application's possible general states to be linkable, i.e. serialised in and reconstructible from the URL.
@@ -308,7 +308,7 @@ The list component now takes an additional prop - the list of queries to push in
 The initial state needs to contain an empty list of recent queries to have somewhere to push queries in. In `app.ls` let's add `queries` array to hold this list:
 
 ```livescript
-intial-state =
+initial-state =
   query: ''
   items:
     * "Hovercraft full of eels"
@@ -331,14 +331,14 @@ Rendering the recent queries is as simple as adding another list component to ou
 
   render: ->
     query = @props.app-state.get \state.query
-    things = @props.app-state.get \state.things
+    items = @props.app-state.get \state.items
     queries = @props.app-state.get \state.queries
 
     d.div do
       d.h1 "A list of useful things"
       list do
         query: query
-        items: (things.deref! |> filter matches query.deref!)
+        items: (items.deref! |> filter matches query.deref!)
         queries: queries
 
       d.h2 "Recent searches"
