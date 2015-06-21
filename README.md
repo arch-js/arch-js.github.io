@@ -7,12 +7,18 @@ The Arch website is built by Jekyll using Github pages. To run the website local
 
 In short:
 ```
-gem install bundler
-bundle install
+$ gem install bundler
+$ bundle install
 ```
 
 ## Running
-To run Jekyll in a way that matches the GitHub Pages build server, run Jekyll with Bundler. Use the command `bundle exec jekyll serve` and the site should be served on `http://localhost:4000`.
+To run Jekyll in a way that matches the GitHub Pages build server, run Jekyll with Bundler. Use the command
+
+```
+$ bundle exec jekyll serve
+```
+
+and the site should be served on `http://localhost:4000`.
 
 ## Contributing
 The documentation in the Arch website is kept in sync with that in the [Arch repository](http://arch-js.github.io) by [ArchBot](https://github.com/archbot). If you need to update any documentation, submit a pull request to [Arch](http://arch-js.github.io), and when the branch is merged into master ArchBot will commit the changes here after all the tests have passed.
