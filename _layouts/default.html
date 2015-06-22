@@ -38,7 +38,7 @@
   {% endif %}
 
   {% if page.no-pagination != true %}
-    <section class="pagination row">
+    <section class="pagination pagination-top row">
       <div class="column large-12">
         {% include pagination.html page=page %}
       </div>
@@ -46,9 +46,14 @@
   {% endif %}
 
   <section class="main-content row">
-    <div class="column large-12">
+    <div class="column {% if page.no-sidebar %}large-12{% else %}medium-9{% endif %}">
       {{ content }}
     </div>
+    {% if page.no-sidebar != true %}
+      <div class="column medium-3">
+        {% include sidebar.html page=page %}
+      </div>
+    {% endif %}
   </section>
 
   {% if page.no-pagination != true %}

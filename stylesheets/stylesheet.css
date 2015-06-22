@@ -139,7 +139,7 @@ a:hover {
 
 @media only screen and (min-width: 40.063em) {
   .main-content {
-    padding: 2rem 4rem;
+    padding: 2rem 2rem;
     font-size: 1.1rem;
   }
 }
@@ -147,7 +147,7 @@ a:hover {
 @media only screen and (min-width: 64.063em) {
   .main-content {
     max-width: 64rem;
-    padding: 2rem 6rem;
+    padding: 2rem 0rem;
     margin: 0 auto;
     font-size: 1.1rem;
   }
@@ -306,4 +306,24 @@ a:hover {
 
 .pagination {
   margin-top: 1.25rem;
+}
+
+.side-nav {
+  display: none;
+}
+
+@media only screen and (min-width: 40.063em) {
+  .side-nav {
+    display: block;
+  }
+}
+
+.pagination-top {
+  display: block;
+}
+
+@media only screen and (min-width: 40.063em) {
+  .pagination-top {
+    display: none;
+  }
 }
