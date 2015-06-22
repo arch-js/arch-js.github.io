@@ -231,10 +231,11 @@ a:hover {
   margin-top: 0;
 }
 .main-content blockquote {
-  padding: 0 1rem;
-  margin-left: 0;
   color: #819198;
-  border-left: 0.3rem solid #dce6f0;
+  border: 0.2rem solid #dce6f0;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 1rem 1rem;
 }
 .main-content blockquote > :first-child {
   margin-top: 0;
