@@ -34,4 +34,4 @@ arch-cli serve
 your application is now running on [http://localhost:3000](http://localhost:3000).
 
 # Documentation
-To learn more about Arch you can [read the documentation](docs/) (which is mostly complete)
+To learn more about Arch you can [read the documentation](docs/02-basic-tutorial.html) (which is mostly complete)
