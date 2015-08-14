@@ -1,7 +1,7 @@
 # About
 Arch is a single page web application framework using React as its UI layer. Arch takes a functional style approach with central immutable state architecture inspired by [Om](https://github.com/omcljs/om).
 
-Arch applications are written in [LiveScript](http://livescript.net) by default (read more about [the reasoning](docs/07-livescript.md) behind the decision), they are fully isomorphic out of the box and Arch comes with it's own Node.js based server, Webpack bundler and a CLI to help you get started.
+Arch applications are written in [LiveScript](http://livescript.net) by default (read more about [the reasoning](docs/07-livescript.html) behind the decision), they are fully isomorphic out of the box and Arch comes with it's own Node.js based server, Webpack bundler and a CLI to help you get started.
 
 # Examples
 For example code, see [demos from the introduction talk](http://github.com/charypar/arch-talk) at London React Meetup.
