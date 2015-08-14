@@ -48,7 +48,7 @@ app-state.get \route .on-change ->
     app-state.get \state.articles.loading .update -> true
 ```
 
-Whenever the route changes, if it has the right parameters, the loading flag of articles is set to true, which gets picked up by another state observer handling that particular task. In response, that observer will fetch the list of articles from the API and when done, update the state, putting the list onto the `articles.items` path, also setting the `loading` flag back to false. The `loading` flag can be used by the component to render a loading indicator. See the [Arch architecture](04-arch-architecture.md) section for more details about the state observer pattern.
+Whenever the route changes, if it has the right parameters, the loading flag of articles is set to true, which gets picked up by another state observer handling that particular task. In response, that observer will fetch the list of articles from the API and when done, update the state, putting the list onto the `articles.items` path, also setting the `loading` flag back to false. The `loading` flag can be used by the component to render a loading indicator. See the [Arch architecture](04-arch-architecture.html) section for more details about the state observer pattern.
 
 The third route is very similar to the second one, except it uses the URL context directly in it's initialiser, fetching the currently shown article.
 

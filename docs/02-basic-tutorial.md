@@ -93,12 +93,12 @@ require! <[
 
 so that we're able to reference the component and use `prelude-ls` implementation of `map`. You can now go to [http://localhost:3000/listing](http://localhost:3000/listing) and see your page rendered.
 
-Pages (route handlers) in Arch are React components. They all share the same `props` format, specifically, they all get the application state as their single prop, called `app-state`. To learn more about routing, read the [routing guide](08-isomorphism-routing.md).
+Pages (route handlers) in Arch are React components. They all share the same `props` format, specifically, they all get the application state as their single prop, called `app-state`. To learn more about routing, read the [routing guide](08-isomorphism-routing.html).
 
 ## LiveScript as template language
 The listing component code deserves a more detailed explanation. First, we don't use JSX to define the DOM structure we're rendering, we use pure LiveScript. Second, we use a thin wrapping layer provided by Arch to make LiveScript a very nice markup language: Each component is a simple function taking its children as arguments - either separately or in an array. Optionally, the first argument is an object with props for the component. Behind the scenes Arch uses `React.createElement` like JSX would.
 
-The result is an almost haml/slim like template language, that is pure LiveScript. In the example route component we render a div containing a h1 and a p with some text. You can read more about the advantages of the language in the [LiveScript section](07-livescript.md)
+The result is an almost haml/slim like template language, that is pure LiveScript. In the example route component we render a div containing a h1 and a p with some text. You can read more about the advantages of the language in the [LiveScript section](07-livescript.html)
 
 ## Adding interaction
 What we built so far is, in essence, a static page. To add some interaction, we need our application to have state. Arch handles UI state in its most basic form the same way React itself does - using component's `state`. Let's make our list searchable. In `listing.ls` add a simple form component:
@@ -149,7 +149,7 @@ React doesn't go much further than that. In real-world applications however, sta
 ## Centralised state instead of Flux
 Arch takes a different approach to state, which is very similar to the [Om framework](https://github.com/omcljs/om) for ClojureScript. In Arch, all shared UI state is kept in a single place, the `app-state` - application state.
 
-The application state is a "cursor" - a focused view of a part of a larger data structure that can be mutated in a controlled fashion. There is a larger discussion of the application structure in the [Arch Architecture](04-arch-architecture.md) section.
+The application state is a "cursor" - a focused view of a part of a larger data structure that can be mutated in a controlled fashion. There is a larger discussion of the application structure in the [Arch Architecture](04-arch-architecture.html) section.
 
 Let's add a list of recent searches into our little demo. Since it will be another listing, we should keep our code DRY and extract the list rendering into a separate component.
 
@@ -271,7 +271,7 @@ You might be thinking "so now we've made a couple things much more complicated a
         @props.items |> map -> d.li it
 ```
 
-Everything works exactly as it did before, except our state is now central, which has countless benefits (see [Application as Data](05-application-as-data.md) for examples). Every time the state gets updated, the whole UI gets automatically re-rendered so we can see our changes (which isn't nearly as expensive as it sounds partly through the magic of React, partly through optimisations Arch itself can do [and soon will do] thanks to the immutable data structures backing the `app-state`).
+Everything works exactly as it did before, except our state is now central, which has countless benefits (see [Application as Data](05-application-as-data.html) for examples). Every time the state gets updated, the whole UI gets automatically re-rendered so we can see our changes (which isn't nearly as expensive as it sounds partly through the magic of React, partly through optimisations Arch itself can do [and soon will do] thanks to the immutable data structures backing the `app-state`).
 
 When the user types into the field, we `update` the query value to the value of the event. The `update` method actually takes a callback, instead of just taking a new value.
 
@@ -447,4 +447,4 @@ This concludes the introductory Arch tutorial. You may have noticed that Arch fo
 
 In this tutorial, you've seen how there are various scopes of state – sizes of the state loop: component local, global - shared between components, global - shared between the app and an API.
 
-The latter case demonstrated one use-case for state observers, but you can extract various different common tasks into state observers (form validation, domain logic computations, service integrations, metrics collection, persistence...). See [Application as Data](05-application-as-data.md) for a larger discussion of the concept of central state.
+The latter case demonstrated one use-case for state observers, but you can extract various different common tasks into state observers (form validation, domain logic computations, service integrations, metrics collection, persistence...). See [Application as Data](05-application-as-data.html) for a larger discussion of the concept of central state.

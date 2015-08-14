@@ -43,7 +43,7 @@ Tries work by storing values in a tree branched by parts of the keys. Say you wa
 
 For a vector, this is enough. [TODO explain actual vector impl.]
 
-For a Map, you need to store key-value pairs, where keys can be anything. The tool to help you overcome the limitation is hashing - a one way function that gives you a unique number for each value (like md5 or sha1). The resulting data structure is called hash array mapped trie. To look up an item, you compute a hash of the key and then divide it into 5-bit pieces (for a 32-way branching, which is efficient). Then you follow the same procedure described above for key 3579 (except that for each step, you'll have 32 options, not 10).
+For a Map, you need to store key-value pairs, where keys can be anything. The tool to help you overcome the limitation is hashing - a one way function that gives you a unique number for each value (like.html5 or sha1). The resulting data structure is called hash array mapped trie. To look up an item, you compute a hash of the key and then divide it into 5-bit pieces (for a 32-way branching, which is efficient). Then you follow the same procedure described above for key 3579 (except that for each step, you'll have 32 options, not 10).
 
 ### Mutation
 Mutation in a trie simply requires finding a node that should store the value, duplicating it, performing the required update and then duplicating all it's parent nodes and updating the references to the child. This process is called path copying.
